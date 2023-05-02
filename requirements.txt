@@ -1,0 +1,12 @@
+streamlit==1.22.0
+pandas==1.5.3
+matplotlib
+seaborn
+torch==2.0.0
+torchaudio==2.0.1
+torchmetrics==0.9.3
+torchview==0.2.6
+torchvision==0.15.1
+torchviz==0.0.2
+scikit-learn
+joblib
