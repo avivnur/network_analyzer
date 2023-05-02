@@ -41,8 +41,9 @@ def load_weights():
 def load_scaler(df):
     scaler = StandardScaler()
     columns_to_scale = df.columns.difference(['attack', 'target']) # Every column except these
-    loaded_scaler = pickle.load(open('model/scaler.pkl', 'rb'))
-    df[columns_to_scale] = loaded_scaler.transform(df[columns_to_scale])
+#     loaded_scaler = pickle.load(open('model/scaler.pkl', 'rb'))
+#     df[columns_to_scale] = loaded_scaler.transform(df[columns_to_scale])
+    df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
     return df
 
 ### Creates equal number of columns between train and test for categorical features
